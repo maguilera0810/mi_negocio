@@ -23,9 +23,16 @@ class ClientSerializer(ModelSerializer):
 
     def validate(self, data):
         email = data.get('email')
-        if Client.objects.filter(email=email).exists():
+        instance = self.instance  # Obtener la instancia actual del cliente
+
+        # Si es una actualización y el correo no cambió, no hay problemas
+        if instance and instance.email == email:
+            return data
+
+        # Verificar si existe algún cliente diferente con el mismo correo
+        if Client.objects.filter(email=email).exclude(id=instance.id if instance else None).exists():
             raise ValidationError(
-                {"email": "Ya existe un client con este correo electrónico."})
+                {"email": "Ya existe un cliente con este correo electrónico."})
         return data
 
     def get_main_address(self, instance):
