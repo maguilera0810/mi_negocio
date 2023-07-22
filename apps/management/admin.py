@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.customer_management.models import Cliente, Direccion
+from apps.management.models import Cliente, Direccion
 
 
 class ClienteAdmin(admin.ModelAdmin):

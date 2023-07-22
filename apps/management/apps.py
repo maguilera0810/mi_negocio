@@ -3,5 +3,5 @@ from django.apps import AppConfig
 
 class CustomerManagementConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.customer_management'
-    label = 'apps_customer_management'
+    name = 'apps.management'
+    label = 'apps_management'
