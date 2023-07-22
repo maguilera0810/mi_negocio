@@ -1,0 +1,66 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+/settings_local
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+
+venv
+db.sqlite3
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+.vscode
+
+
+# Elastic Beanstalk Files
+#.elasticbeanstalk/*
+#!.elasticbeanstalk/*.cfg.yml
+#!.elasticbeanstalk/*.global.yml
+
+# TEMP FILES TO ZIP
+zipfiles/*.mp3
+zipfiles/*.png
+zipfiles/*.zip
+zipfiles/**/*.mp3
+zipfiles/**/*.png
+zipfiles/**/*.zip
+zipfiles/animations/
+zipfiles/lokalise/
+
+#env file
+storybook/settings/.env.*
+storybook/settings/.env
+storybook/settings/.env.prod
+storybook/settings/.env.dev
+
+#coverage
+.coverage
+coverage.xml
+
+# ENVIRONMENTS
+.env
+.env.*
+envs/
+
+
+.DS_Store
