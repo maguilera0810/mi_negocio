@@ -30,7 +30,7 @@ DEBUG = os.getenv("DEBUG", False) in (True, 'True')
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+CUSTOM_APPS = [
+    'apps.customer_management',
+]
+
+INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
+
+AUTH_USER_MODEL = "apps_customer_management.Cliente"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
