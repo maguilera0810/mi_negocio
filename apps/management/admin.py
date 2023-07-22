@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from apps.management.models import Cliente, Direccion
+from apps.management.models import Client, Address
 
 
-class ClienteAdmin(admin.ModelAdmin):
+class ClientAdmin(admin.ModelAdmin):
     ...
 
 
@@ -11,5 +11,5 @@ class DireccionAdmin(admin.ModelAdmin):
     ...
 
 
-admin.site.register(Cliente, ClienteAdmin)
-admin.site.register(Direccion, ClienteAdmin)
+admin.site.register(Client, ClientAdmin)
+admin.site.register(Address, ClientAdmin)

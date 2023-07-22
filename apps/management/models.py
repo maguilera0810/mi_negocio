@@ -1,25 +1,28 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from mi_negocio.enums import IdentificationType
 
 
-class Cliente(AbstractUser):
+class Client(AbstractUser):
     IDENTIFICATION_TYPES = (
-        ("ruc", "ruc"),
-        ("cedula", "cedula"),
+        (IdentificationType.RUC.value, IdentificationType.RUC.value),
+        (IdentificationType.DNI.value, IdentificationType.DNI.value),
     )
-    tipo_identificacion = models.CharField(blank=False,
-                                           null=False, max_length=6)
-    identificacion = models.CharField(blank=False, null=False, max_length=15)
-    celular = models.CharField(blank=False, null=False, max_length=12)
+    identification_type = models.CharField(blank=False, null=False,
+                                           choices=IDENTIFICATION_TYPES, max_length=6)
+    identification = models.CharField(blank=False, null=False,
+                                      max_length=15, unique=True)
+    cellphone = models.CharField(blank=False, null=False, max_length=12)
+
+    def save(self, *args, **kwargs):
+        self.username = self.email
+        super(Client, self).save(*args, **kwargs)
 
 
-class Direccion(models.Model):
-    cliente = models.ForeignKey(to=Cliente,
-                                on_delete=models.CASCADE)
-    provincia = models.CharField(blank=False, null=False, max_length=30)
-    ciudad = models.CharField(blank=False, null=False, max_length=30)
-    calle_principal = models.CharField(blank=False, null=False, max_length=30)
-    calle_secundaria = models.CharField(blank=False, null=False, max_length=30)
-    telefono = models.CharField(blank=False, null=False, max_length=12)
-    celular = models.CharField(blank=False, null=False, max_length=12)
-    codigo_postal = models.IntegerField(blank=False, null=False)
+class Address(models.Model):
+    client = models.ForeignKey(to=Client,
+                               on_delete=models.CASCADE)
+    province = models.CharField(blank=False, null=False, max_length=30)
+    city = models.CharField(blank=False, null=False, max_length=30)
+    address = models.CharField(blank=False, null=False, max_length=30)
+    is_matriz = models.BooleanField(default=False)
