@@ -2,7 +2,6 @@ from django.conf import settings
 from rest_framework import viewsets
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
 
-DEBUG = settings.DEBUG
 TOKEN_AUTHENTICATION = settings.TOKEN_AUTHENTICATION
 
 
