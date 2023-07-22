@@ -40,12 +40,12 @@ DJANGO_APPS = [
 ]
 
 CUSTOM_APPS = [
-    'apps.customer_management',
+    'apps.management',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
 
-AUTH_USER_MODEL = "apps_customer_management.Cliente"
+AUTH_USER_MODEL = "apps_management.Cliente"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
