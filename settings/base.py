@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u=_$ld!@s-+*eef@bw)tap*i0fo0iv=gr1(-n16z(k+ha03)3t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", False) in (True, 'True')
-
-
+DEBUG = os.getenv("DEBUG") == 'True'
+print(f"{DEBUG=}")
+TOKEN_AUTHENTICATION = os.getenv("TOKEN_AUTHENTICATION") == 'True'
 # Application definition
 
 DJANGO_APPS = [
@@ -45,7 +45,7 @@ CUSTOM_APPS = [
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
 
-AUTH_USER_MODEL = "apps_management.Cliente"
+AUTH_USER_MODEL = "apps_management.Client"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
