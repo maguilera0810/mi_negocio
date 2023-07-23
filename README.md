@@ -4,16 +4,16 @@
 
 # Index
 
-- [Prerequisites](#prerequisites-📋) 📋
-- [Installation](#installation-🔧) 🔧
-- [Setting Environment Variables](#setting-environment-variables-📦) 📦
-- [Execution](#execution-⚙️) ⚙️
-- [Tests](#tests-🧪) 🧪
-- [Tools](#tools-🛠️) 🛠️
-- [Endpoints](#endpoints-📩) 📩
-- [Postman](#postman-img-srcextrapostmansvg-width26) <img src="./extra/Postman.svg" width="14">
-- [Tasks](#tasks-📚) 📚
-- [Authors](#authors-✒️) ✒️
+- [Prerequisites](#prerequisites-) 📋
+- [Installation](#installation-) 🔧
+- [Setting Environment Variables](#setting-environment-variables-) 📦
+- [Execution](#execution-) ⚙️
+- [Tests](#tests-) 🧪
+- [Tools](#tools-) 🛠️
+- [Endpoints](#endpoints-) 📩
+- [Postman](#postman)
+- [Tasks](#tasks-) 📚
+- [Authors](#authors-) ✒️
 
 ---
 
@@ -131,7 +131,7 @@ Below is a list of the available endpoints:
 
 ---
 
-# Postman   <img src="./extra/Postman.svg" width="26">
+# Postman  
 
 [Index](#index)
 
