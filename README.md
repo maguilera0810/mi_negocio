@@ -117,7 +117,7 @@ python manage.py test --verbosity=2
 
 - [SQLite](https://www.sqlite.org/index.html) - is  a small, fast, self-contained, high-reliability, full-featured, SQL database engine. For this project a powerful database manager was not needed, like PostgreSQL for example.
 
-## [Endpoints](extra/ENDPOINTS.md) 📩
+## [Endpoints](extra/ENDPOINTS.md)
 
 [Index](#index)
 
