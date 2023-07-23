@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "4f6e4331-0088-42dc-bf03-56355054b969",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12390005",
+		"_collection_link": "https://www.postman.com/maguilera0810/workspace/mi-negocio/collection/12390005-4f6e4331-0088-42dc-bf03-56355054b969?action=share&creator=12390005&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "V1",
+			"item": [
+				{
+					"name": "CLIENT",
+					"item": [
+						{
+							"name": "Retrieve",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/api/v1/management/client/1"
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/management/client/?identification=0704482223&identification_type=DNI&first_name=Mauricio&last_name=Aguilera",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"management",
+										"client",
+										""
+									],
+									"query": [
+										{
+											"key": "identification",
+											"value": "0704482223"
+										},
+										{
+											"key": "identification_type",
+											"value": "DNI",
+											"description": "RUC, DNI"
+										},
+										{
+											"key": "first_name",
+											"value": "Mauricio"
+										},
+										{
+											"key": "last_name",
+											"value": "Aguilera"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"maguilera999@gmail.com\",\r\n    \"first_name\": \"Mauricio\",\r\n    \"last_name\": \"Aguilera\",\r\n    \"identification_type\": \"DNI\",\r\n    \"identification\": \"0123456789\",\r\n    \"cellphone\": \"0999999999\",\r\n    \"main_address\": {\r\n        \"province\": \"Guayas\",\r\n        \"city\": \"Guayaquil\",\r\n        \"address\": \"Calle 1 y Calle 2\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/management/client/"
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"maguilera999@gmail.com\",\r\n    \"first_name\": \"Mauricio 999\",\r\n    \"last_name\": \"Aguilera 999\",\r\n    \"identification_type\": \"DNI\",\r\n    \"identification\": \"9999999999\",\r\n    \"cellphone\": \"0998695892\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/management/client/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{url}}/api/v1/management/client/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ADDRESS",
+					"item": [
+						{
+							"name": "Retrieve",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/api/v1/management/address/1"
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/management/address/?is_matriz=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"management",
+										"address",
+										""
+									],
+									"query": [
+										{
+											"key": "client",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "is_matriz",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"province\": \"Peru\",\r\n    \"city\": \"Lima\",\r\n    \"address\": \"Por le rio\",\r\n    \"is_matriz\": false,\r\n    \"client\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/management/address/"
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"province\": \"Peru\",\r\n    \"city\": \"Lima\",\r\n    \"address\": \"Por le rio\",\r\n    \"is_matriz\": true,\r\n    \"client\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/management/address/7"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{url}}/api/v1/management/address/6"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
