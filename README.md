@@ -4,16 +4,16 @@
 
 # Index
 
-- [Prerequisites](#prerequisites-) 📋
-- [Installation](#installation-) 🔧
-- [Setting Environment Variables](#setting-environment-variables-) 📦
-- [Execution](#execution-) ⚙️
-- [Tests](#tests-) 🧪
-- [Tools](#tools-) 🛠️
-- [Endpoints](#endpoints-) 📩
+- [Prerequisites](#prerequisites) 📋
+- [Installation](#installation) 🔧
+- [Setting Environment Variables](#setting-environment-variables) 📦
+- [Execution](#execution) ⚙️
+- [Tests](#tests) 🧪
+- [Tools](#tools) 🛠️
+- [Endpoints](#endpoints) 📩
 - [Postman](#postman)
-- [Tasks](#tasks-) 📚
-- [Authors](#authors-) ✒️
+- [Tasks](#tasks) 📚
+- [Authors](#authors) ✒️
 
 ---
 
@@ -21,7 +21,7 @@
 
 _These instructions will allow you to get a working copy of the project on your local machine for development and testing purposes._
 
-# Prerequisites 📋
+# Prerequisites
 
 [Index](#index)
 
@@ -29,7 +29,7 @@ Before you begin, make sure you have the following installed:
 
 - [Python 3.8.0](https://www.python.org/downloads/release/python-380/)
 
-# Installation 🔧
+# Installation
 
 [Index](#index)
 
@@ -51,7 +51,7 @@ cd mi_negocio
 pip install -r requirements.txt
 ```
 
-# Setting Environment Variables 📦
+# Setting Environment Variables
 
 [Index](#index)
 
@@ -61,7 +61,7 @@ Ensure that you have the environment and necessary environment variables configu
 DEBUG=True
 ```
 
-# Execution ⚙️
+# Execution
 
 [Index](#index)
 
@@ -93,7 +93,7 @@ python manage.py runserver --settings=settings.prod
 The project will be available at `http://127.0.0.1:8000/`.
 You can access the admin panel at `http://127.0.0.1:8000/admin/`.
 
-# Tests 🧪
+# Tests
 
 [Index](#index)
 
@@ -103,7 +103,7 @@ To run the tests, use the following command:
 python manage.py test --verbosity=2
 ```
 
-# Tools 🛠️
+# Tools
 
 [Index](#index)
 
@@ -152,7 +152,7 @@ Implementar las siguientes funcionalidades:
 
 ----
 
-# Authors ✒️
+# Authors
 
 [Index](#index)
 
