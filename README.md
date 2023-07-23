@@ -1,8 +1,6 @@
 # Mi Negocio
 
----
-
-# Index
+## Index
 
 - [Prerequisites](#prerequisites) 📋
 - [Installation](#installation) 🔧
@@ -17,7 +15,7 @@
 
 ---
 
-# Let's go 🚀
+## Let's go 🚀
 
 _These instructions will allow you to get a working copy of the project on your local machine for development and testing purposes._
 
@@ -29,7 +27,7 @@ Before you begin, make sure you have the following installed:
 
 - [Python 3.8.0](https://www.python.org/downloads/release/python-380/)
 
-# Installation
+## Installation
 
 [Index](#index)
 
@@ -51,7 +49,7 @@ cd mi_negocio
 pip install -r requirements.txt
 ```
 
-# Setting Environment Variables
+## Setting Environment Variables
 
 [Index](#index)
 
@@ -61,7 +59,7 @@ Ensure that you have the environment and necessary environment variables configu
 DEBUG=True
 ```
 
-# Execution
+## Execution
 
 [Index](#index)
 
@@ -93,7 +91,7 @@ python manage.py runserver --settings=settings.prod
 The project will be available at `http://127.0.0.1:8000/`.
 You can access the admin panel at `http://127.0.0.1:8000/admin/`.
 
-# Tests
+## Tests
 
 [Index](#index)
 
@@ -103,7 +101,7 @@ To run the tests, use the following command:
 python manage.py test --verbosity=2
 ```
 
-# Tools
+## Tools
 
 [Index](#index)
 
@@ -119,7 +117,7 @@ python manage.py test --verbosity=2
 
 - [SQLite](https://www.sqlite.org/index.html) - is  a small, fast, self-contained, high-reliability, full-featured, SQL database engine. For this project a powerful database manager was not needed, like PostgreSQL for example.
 
-# [Endpoints](extra/ENDPOINTS.md) 📩
+## [Endpoints](extra/ENDPOINTS.md) 📩
 
 [Index](#index)
 
@@ -131,13 +129,13 @@ Below is a list of the available endpoints:
 
 ---
 
-# Postman  
+## Postman  
 
 [Index](#index)
 
 You can find a postman_collenction file to replicate ([here](API.postman_collection.json))
 
-# Tasks
+## Tasks
 
 [Index](#index)
 
@@ -159,5 +157,6 @@ Implementar las siguientes funcionalidades:
 - **Mauricio Aguilera** - _IT Enginneer_
   - [Github](https://github.com/maguilera0810)
   - [Linkedin](https://www.linkedin.com/in/maguilera-jaramillo/)
+  - [CV](https://drive.google.com/file/d/1rHONaTooKeXc-1z18j5pL09HruI8GeWF/view?usp=sharing)
 
 ----
