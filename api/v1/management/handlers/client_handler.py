@@ -1,10 +1,11 @@
 from rest_framework import status
 from rest_framework.response import Response
 
-from api.v1.management.services.client_service import ClientService
-from api.v1.management.serializers.client_serializer import ClientSerializer
 from api.v1.management.serializers.address_serializer import AddressSerializer
+from api.v1.management.serializers.client_serializer import ClientSerializer
+from api.v1.management.services.client_service import ClientService
 from mi_negocio.views import BaseViewSet
+from utils.clean_data import CleanData
 
 
 class ClientHandler(BaseViewSet):
@@ -18,7 +19,8 @@ class ClientHandler(BaseViewSet):
 
     def list(self, request):
         srv = ClientService()
-        clients = srv.get_all(filters=request.GET.dict())
+        filters = CleanData.clean_filters(request.GET.dict())
+        clients = srv.get_all(filters)
         serializer = ClientSerializer(clients, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
