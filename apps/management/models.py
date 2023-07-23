@@ -12,7 +12,7 @@ class Client(AbstractUser):
                                            choices=IDENTIFICATION_TYPES, max_length=6)
     identification = models.CharField(blank=False, null=False,
                                       max_length=15, unique=True)
-    cellphone = models.CharField(blank=False, null=False, max_length=12)
+    cellphone = models.CharField(blank=False, null=False, max_length=30)
 
     def save(self, *args, **kwargs):
         self.username = self.email
@@ -22,7 +22,7 @@ class Client(AbstractUser):
 class Address(models.Model):
     client = models.ForeignKey(to=Client,
                                on_delete=models.CASCADE)
-    province = models.CharField(blank=False, null=False, max_length=30)
-    city = models.CharField(blank=False, null=False, max_length=30)
-    address = models.CharField(blank=False, null=False, max_length=30)
+    province = models.CharField(blank=False, null=False, max_length=50)
+    city = models.CharField(blank=False, null=False, max_length=50)
+    address = models.CharField(blank=False, null=False, max_length=150)
     is_matriz = models.BooleanField(default=False)
