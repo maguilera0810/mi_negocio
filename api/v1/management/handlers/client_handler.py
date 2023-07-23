@@ -30,6 +30,7 @@ class ClientHandler(BaseViewSet):
             return Response(client_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         client = client_serializer.save()
         address["client"] = client.id
+        address["is_matriz"] = True
         address_serializer = AddressSerializer(data=address, partial=False)
         if not address_serializer.is_valid():
             return Response(address_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
