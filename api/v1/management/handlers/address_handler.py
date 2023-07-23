@@ -1,9 +1,10 @@
 from rest_framework import status
 from rest_framework.response import Response
 
-from api.v1.management.services.address_service import AddressService
 from api.v1.management.serializers.address_serializer import AddressSerializer
+from api.v1.management.services.address_service import AddressService
 from mi_negocio.views import BaseViewSet
+from utils.clean_data import CleanData
 
 
 class AddressHandler(BaseViewSet):
@@ -17,7 +18,8 @@ class AddressHandler(BaseViewSet):
 
     def list(self, request):
         srv = AddressService()
-        addresss = srv.get_all(filters=request.GET)
+        filters = CleanData.clean_filters(request.GET.dict())
+        addresss = srv.get_all(filters)
         serializer = AddressSerializer(addresss, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
