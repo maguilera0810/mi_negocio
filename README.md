@@ -112,8 +112,6 @@ python manage.py test --verbosity=2
 - [DjangoRestFramework](https://www.django-rest-framework.org/) - is a framework that allows us to easily develop a REST API in Python. It has several advantages such as authentication, security, serialization, pagination, direct interaction with the Django ORM among others.
 
 - [pdb](https://docs.python.org/3/library/pdb.html) - it's a really easy python debugger, to check a code snippets or whole streams, recommended for beginners in debugging
-  
-- [threading](https://docs.python.org/3/library/threading.html) - is a simple way to carry out tasks running on background
 
 - [SQLite](https://www.sqlite.org/index.html) - is  a small, fast, self-contained, high-reliability, full-featured, SQL database engine. For this project a powerful database manager was not needed, like PostgreSQL for example.
 
